@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="소프트웨어를 전공하고 스포츠와 게임을 좋아하는 대학생 이성훈의 자기소개 페이지입니다." />
+    <meta name="theme-color" content="#f4f8ff" />
+    <title>이성훈 | 자기소개</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232d6cdf'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-size='34' font-weight='700' fill='white'%3E%E3%85%87%3C/text%3E%3C/svg%3E" />
+
+    <style>
+      :root {
+        color-scheme: light;
+        --page: #f4f8ff;
+        --paper: #ffffff;
+        --primary: #2d6cdf;
+        --primary-dark: #174aa5;
+        --text: #152033;
+        --muted: #66738a;
+        --line: #dfe7f2;
+        --shadow: 0 24px 70px rgba(45, 78, 125, 0.13);
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        color: var(--text);
+        font-family: Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", system-ui, sans-serif;
+        background:
+          linear-gradient(rgba(244, 248, 255, 0.88), rgba(244, 248, 255, 0.96)),
+          repeating-linear-gradient(90deg, #dce9fb 0 1px, transparent 1px 80px),
+          repeating-linear-gradient(0deg, #dce9fb 0 1px, transparent 1px 80px);
+        line-height: 1.65;
+      }
+
+      .page {
+        width: min(1000px, calc(100% - 40px));
+        margin: 56px auto;
+        overflow: hidden;
+        border: 1px solid rgba(165, 184, 211, 0.45);
+        border-radius: 28px;
+        background: var(--paper);
+        box-shadow: var(--shadow);
+      }
+
+      .profile {
+        display: grid;
+        grid-template-columns: 310px 1fr;
+        min-height: 680px;
+      }
+
+      .sidebar {
+        position: relative;
+        padding: 52px 38px;
+        background: linear-gradient(160deg, #eaf3ff 0%, #d8e9ff 100%);
+      }
+
+      .sidebar::after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 110px;
+        height: 110px;
+        border-radius: 100% 0 0;
+        background: rgba(45, 108, 223, 0.1);
+        content: "";
+      }
+
+      .avatar {
+        display: grid;
+        width: 112px;
+        aspect-ratio: 1;
+        margin-bottom: 30px;
+        place-items: center;
+        border: 8px solid rgba(255, 255, 255, 0.72);
+        border-radius: 50%;
+        background: var(--primary);
+        box-shadow: 0 12px 30px rgba(45, 108, 223, 0.2);
+        color: white;
+        font-size: 2.75rem;
+        font-weight: 800;
+      }
+
+      .role {
+        margin: 0 0 8px;
+        color: var(--primary-dark);
+        font-size: 0.88rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+      }
+
+      h1 {
+        margin: 0;
+        color: #102141;
+        font-size: clamp(2.65rem, 7vw, 4.2rem);
+        line-height: 1.05;
+        letter-spacing: -0.07em;
+      }
+
+      .major {
+        margin: 14px 0 36px;
+        color: var(--muted);
+        font-size: 1.04rem;
+        font-weight: 600;
+      }
+
+      .sidebar-title {
+        margin: 0 0 14px;
+        color: var(--primary-dark);
+        font-size: 0.82rem;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+      }
+
+      .quick-info {
+        display: grid;
+        gap: 12px;
+        margin: 0;
+      }
+
+      .quick-info div {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 12px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(45, 108, 223, 0.14);
+      }
+
+      dt { color: var(--muted); font-size: 0.87rem; }
+      dd { margin: 0; font-weight: 700; }
+
+      .main-content { padding: 58px 62px; }
+      .section + .section { margin-top: 44px; }
+
+      .section-heading {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin: 0 0 18px;
+        font-size: 1.08rem;
+        letter-spacing: -0.03em;
+      }
+
+      .section-heading::before {
+        width: 30px;
+        height: 4px;
+        border-radius: 999px;
+        background: var(--primary);
+        content: "";
+      }
+
+      .intro {
+        margin: 0;
+        color: #45536a;
+        font-size: 1.06rem;
+        line-height: 1.9;
+      }
+
+      .intro strong { color: var(--primary-dark); }
+
+      .interest-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .interest {
+        padding: 22px;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: #fbfdff;
+      }
+
+      .interest-number {
+        display: block;
+        margin-bottom: 20px;
+        color: var(--primary);
+        font-size: 0.8rem;
+        font-weight: 800;
+      }
+
+      .interest h3 { margin: 0 0 5px; font-size: 1.08rem; }
+      .interest p { margin: 0; color: var(--muted); font-size: 0.9rem; }
+
+      .goal {
+        position: relative;
+        overflow: hidden;
+        margin: 0;
+        padding: 26px 28px;
+        border-radius: 18px;
+        background: var(--primary);
+        color: white;
+      }
+
+      .goal::after {
+        position: absolute;
+        top: -45px;
+        right: -35px;
+        width: 130px;
+        height: 130px;
+        border: 24px solid rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        content: "";
+      }
+
+      .goal-label {
+        display: block;
+        margin-bottom: 7px;
+        color: #cfe0ff;
+        font-size: 0.82rem;
+        font-weight: 700;
+      }
+
+      .goal strong {
+        position: relative;
+        z-index: 1;
+        font-size: clamp(1.25rem, 3vw, 1.65rem);
+        letter-spacing: -0.04em;
+      }
+
+      footer {
+        padding: 18px 28px;
+        border-top: 1px solid var(--line);
+        color: #8a97aa;
+        text-align: center;
+        font-size: 0.82rem;
+      }
+
+      @media (max-width: 760px) {
+        .page { width: min(100% - 24px, 560px); margin: 20px auto; border-radius: 22px; }
+        .profile { grid-template-columns: 1fr; }
+        .sidebar, .main-content { padding: 36px 26px; }
+        .avatar { width: 90px; margin-bottom: 24px; font-size: 2.2rem; }
+        .major { margin-bottom: 28px; }
+        .interest-grid { grid-template-columns: 1fr; }
+        .section + .section { margin-top: 36px; }
+      }
+
+      @media print {
+        body { background: white; }
+        .page { width: 100%; margin: 0; border: 0; border-radius: 0; box-shadow: none; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="page">
+      <article class="profile">
+        <aside class="sidebar" aria-label="프로필 기본 정보">
+          <div class="avatar" aria-hidden="true">이</div>
+          <p class="role">대학생</p>
+          <h1>이성훈</h1>
+          <p class="major">소프트웨어 전공</p>
+
+          <p class="sidebar-title">기본 정보</p>
+          <dl class="quick-info">
+            <div><dt>성별</dt><dd>남자</dd></div>
+            <div><dt>나이</dt><dd>24살</dd></div>
+            <div><dt>신분</dt><dd>대학생</dd></div>
+            <div><dt>전공</dt><dd>소프트웨어</dd></div>
+          </dl>
+        </aside>
+
+        <div class="main-content">
+          <section class="section" aria-labelledby="about-heading">
+            <h2 class="section-heading" id="about-heading">소개</h2>
+            <p class="intro">
+              안녕하세요. 저는 <strong>소프트웨어를 전공</strong>하고 있는 대학생 이성훈입니다.
+              스포츠와 게임을 좋아하며, 학업에 충실하기 위해 꾸준히 노력하고 있습니다.
+            </p>
+          </section>
+
+          <section class="section" aria-labelledby="interest-heading">
+            <h2 class="section-heading" id="interest-heading">관심 분야</h2>
+            <div class="interest-grid">
+              <article class="interest">
+                <span class="interest-number">01</span>
+                <h3>스포츠</h3>
+                <p>다양한 스포츠를 즐겨 봅니다.</p>
+              </article>
+              <article class="interest">
+                <span class="interest-number">02</span>
+                <h3>게임</h3>
+                <p>게임을 즐기며 새로운 경험을 좋아합니다.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="section" aria-labelledby="goal-heading">
+            <h2 class="section-heading" id="goal-heading">현재 목표</h2>
+            <p class="goal">
+              <span class="goal-label">지금 가장 집중하는 것</span>
+              <strong>좋은 학점 받기</strong>
+            </p>
+          </section>
+        </div>
+      </article>
+
+      <footer>© 2026 이성훈</footer>
+    </main>
+  </body>
+</html>
